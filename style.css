@@ -1,25 +1,22 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f9fafb;
-  color: #333;
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
 }
 
-header {
-  background: #4a90e2;
-  color: white;
-  padding: 2rem;
-  text-align: center;
-}
-
-main {
-  padding: 2rem;
-}
-
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
+.team-member {
+  background: white;
   padding: 1rem;
-  margin-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
