@@ -9,7 +9,7 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #fdf2f2; /* soft background with a red tint */
+      background: #fdf2f2;
       color: #333;
     }
 
@@ -17,17 +17,26 @@
       background: linear-gradient(135deg, #E3242B, #b71c20);
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
     }
 
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
+    header p.tagline {
+      margin-top: 0.8rem;
+      font-size: 1.3rem;
+      font-style: italic;
+      opacity: 0.95;
+    }
+
+    header p.motto {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #ffe4e4;
     }
 
     section {
@@ -41,6 +50,17 @@
       font-size: 2rem;
       margin-bottom: 1rem;
       color: #E3242B;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #E3242B;
+      margin: 0.8rem auto 0;
+      border-radius: 2px;
     }
 
     p {
@@ -48,6 +68,7 @@
       font-size: 1.1rem;
       color: #555;
       margin-bottom: 2rem;
+      line-height: 1.6;
     }
 
     .team {
@@ -59,7 +80,7 @@
     .team.two-cols {
       grid-template-columns: repeat(2, 1fr);
       max-width: 700px;
-      margin: 0 auto 3rem auto; /* adds gap under first row */
+      margin: 0 auto 3rem auto;
     }
 
     .team.three-cols {
@@ -78,7 +99,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: 260px; /* equal card height */
+      height: 260px;
     }
 
     .card:hover {
@@ -121,12 +142,17 @@
 
   <header>
     <h1>Brainlite Palatine</h1>
-    <p>Ideas. Learning. Growth.</p>
+    <p class="tagline">Ideas. Learning. Growth.</p>
+    <p class="motto">Brainlite — Brightening minds, one student at a time</p>
   </header>
 
   <section>
     <h2>What is Brainlite?</h2>
-    <p>Brainlite stands for innovation, collaboration, and lifelong learning. We aim to create a community where ideas grow and people achieve their full potential.</p>
+    <p>
+      Brainlite is a nonprofit tutoring organization run by Fremd students. We adapt to each student’s unique 
+      learning style, providing personalized support that builds confidence, mastery, and long-term skills. 
+      Our mission is simple: brightening minds and creating lifelong learners through student-driven tutoring.
+    </p>
   </section>
 
   <section>
@@ -136,7 +162,7 @@
     <div class="team two-cols">
       <div class="card">
         <img src="member1.jpg" alt="Member 1">
-        <h3>arin Mehta</h3>
+        <h3>Aarin Mehta</h3>
         <p>President</p>
       </div>
       <div class="card">
