@@ -30,7 +30,7 @@
 .team.two-cols {
   grid-template-columns: repeat(2, 1fr);
   max-width: 700px;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 2.5rem auto; /* adds spacing below this row */
 }
 
 .team.three-cols {
@@ -39,3 +39,16 @@
   margin: 0 auto;
 }
 
+/* Equal height cards */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* keeps content centered vertically */
+  height: 250px; /* force equal height for all cards */
+}
