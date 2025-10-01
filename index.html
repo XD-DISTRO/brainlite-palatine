@@ -9,12 +9,12 @@
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9fafc;
+      background: #fdf2f2; /* soft background with a red tint */
       color: #333;
     }
 
     header {
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      background: linear-gradient(135deg, #E3242B, #b71c20);
       color: white;
       text-align: center;
       padding: 2rem 1rem;
@@ -40,7 +40,7 @@
       text-align: center;
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: #1e3a8a;
+      color: #E3242B;
     }
 
     p {
@@ -52,22 +52,38 @@
 
     .team {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .team.two-cols {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 700px;
+      margin: 0 auto 3rem auto; /* adds gap under first row */
+    }
+
+    .team.three-cols {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     .card {
       background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(227, 36, 43, 0.15);
       text-align: center;
       padding: 1.5rem;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 260px; /* equal card height */
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 20px rgba(227, 36, 43, 0.3);
     }
 
     .card img {
@@ -76,6 +92,7 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 1rem;
+      border: 3px solid #E3242B;
     }
 
     .card h3 {
@@ -90,15 +107,9 @@
       color: #475569;
     }
 
-    .card a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
     footer {
       background: #1e293b;
-      color: #ccc;
+      color: #eee;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
@@ -119,41 +130,41 @@
   </section>
 
   <section>
-  <h2>Meet Our Team</h2>
+    <h2>Meet Our Team</h2>
+    
+    <!-- First row (2 members) -->
+    <div class="team two-cols">
+      <div class="card">
+        <img src="member1.jpg" alt="Member 1">
+        <h3>arin Mehta</h3>
+        <p>President</p>
+      </div>
+      <div class="card">
+        <img src="member2.jpg" alt="Member 2">
+        <h3>Rihaan Ghia</h3>
+        <p>Vice-President</p>
+      </div>
+    </div>
 
-  <!-- First row: President + Vice-President -->
-  <div class="team two-cols">
-    <div class="card">
-      <img src="member1.jpg" alt="Member 1">
-      <h3>Aarin Mehta</h3>
-      <p>President</p>
+    <!-- Second row (3 members) -->
+    <div class="team three-cols">
+      <div class="card">
+        <img src="member3.jpg" alt="Member 3">
+        <h3>Anirudh Gudavalli</h3>
+        <p>Treasurer</p>
+      </div>
+      <div class="card">
+        <img src="member4.jpg" alt="Member 4">
+        <h3>Vikram Pai</h3>
+        <p>Human Resources</p>
+      </div>
+      <div class="card">
+        <img src="member5.jpg" alt="Member 5">
+        <h3>Arav Patel</h3>
+        <p>Marketing Director</p>
+      </div>
     </div>
-    <div class="card">
-      <img src="member2.jpg" alt="Member 2">
-      <h3>Rihaan Ghia</h3>
-      <p>Vice-President</p>
-    </div>
-  </div>
-
-  <!-- Second row: 3 other members -->
-  <div class="team three-cols">
-    <div class="card">
-      <img src="member3.jpg" alt="Member 3">
-      <h3>Anirudh Gudavalli</h3>
-      <p>Treasurer</p>
-    </div>
-    <div class="card">
-      <img src="member4.jpg" alt="Member 4">
-      <h3>Vikram Pai</h3>
-      <p>Human Resources</p>
-    </div>
-    <div class="card">
-      <img src="member5.jpg" alt="Member 5">
-      <h3>Arav Patel</h3>
-      <p>Marketing Director</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <footer>
     © 2025 Brainlite Palatine. All rights reserved.
