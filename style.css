@@ -1,24 +1,46 @@
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-top: 1.5rem;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fdf2f2; /* soft background with a red tint */
+  color: #333;
 }
 
-.team-member {
-  background: #E3242B;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+header {
+  background: linear-gradient(135deg, #E3242B, #b71c20);
+  color: white;
   text-align: center;
+  padding: 2rem 1rem;
 }
 
-.team-member img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+section {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  color: #E3242B;
+}
+
+p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
 }
 
 .team {
@@ -30,7 +52,7 @@
 .team.two-cols {
   grid-template-columns: repeat(2, 1fr);
   max-width: 700px;
-  margin: 0 auto 2.5rem auto; /* adds spacing below this row */
+  margin: 0 auto 2.5rem auto;
 }
 
 .team.three-cols {
@@ -39,16 +61,56 @@
   margin: 0 auto;
 }
 
-/* Equal height cards */
 .card {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(227, 36, 43, 0.15); /* red tint shadow */
   text-align: center;
   padding: 1.5rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* keeps content centered vertically */
-  height: 250px; /* force equal height for all cards */
+  justify-content: center;
+  height: 250px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(227, 36, 43, 0.3);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #E3242B;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  color: #1e293b;
+}
+
+.card p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #475569;
+}
+
+.card a {
+  color: #E3242B;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer {
+  background: #1e293b;
+  color: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
 }
