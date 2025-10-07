@@ -64,15 +64,17 @@ p {
 .card {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(227, 36, 43, 0.15); /* red tint shadow */
+  box-shadow: 0 4px 10px rgba(227, 36, 43, 0.15);
   text-align: center;
   padding: 1.5rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 250px;
+  justify-content: center;  /* vertical centering */
+  align-items: center;       /* horizontal centering */
+  height: 260px;
 }
+
 
 .card:hover {
   transform: translateY(-5px);
