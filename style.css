@@ -82,11 +82,13 @@ p {
 }
 
 .card img {
-  width: 100px;
-  height: 100px;
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
+  object-position: center; /* centers the photo content */
   border: 3px solid #E3242B;
 }
 
