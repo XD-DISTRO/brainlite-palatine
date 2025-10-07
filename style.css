@@ -1,28 +1,39 @@
+/* ======= GENERAL ======= */
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: #fdf2f2; /* soft background with a red tint */
+  background: #fdf2f2;
   color: #333;
 }
 
+/* ======= HEADER ======= */
 header {
   background: linear-gradient(135deg, #E3242B, #b71c20);
   color: white;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1rem;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
 }
 
 header p {
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   font-size: 1.2rem;
 }
 
+header p.motto {
+  font-style: italic;
+  opacity: 0.95;
+  color: #ffe4e4;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* ======= SECTION FORMATTING ======= */
 section {
   max-width: 1100px;
   margin: 3rem auto;
@@ -34,6 +45,17 @@ h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #E3242B;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #E3242B;
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
 }
 
 p {
@@ -41,26 +63,33 @@ p {
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
+/* ======= TEAM GRID ======= */
 .team {
   display: grid;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .team.two-cols {
   grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
   max-width: 700px;
-  margin: 0 auto 2.5rem auto;
+  margin: 0 auto 3rem auto;
 }
 
 .team.three-cols {
   grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
 }
 
+/* ======= TEAM CARDS ======= */
 .card {
   background: white;
   border-radius: 12px;
@@ -70,9 +99,16 @@ p {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;      /* centers all content horizontally */
-  justify-content: center;  /* centers all content vertically */
-  height: 260px;            /* equal card height */
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(227, 36, 43, 0.3);
 }
 
 .card img {
@@ -84,13 +120,6 @@ p {
   border: 3px solid #E3242B;
   display: block;
 }
-
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(227, 36, 43, 0.3);
-}
-
 
 .card h3 {
   margin: 0.5rem 0;
@@ -110,14 +139,38 @@ p {
   font-weight: 500;
 }
 
+/* ======= CONTACT SECTION ======= */
+.contact {
+  background: #E3242B;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+}
+
+.contact a {
+  color: #ffe4e4;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* ======= FOOTER ======= */
 footer {
   background: #1e293b;
   color: #eee;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
   font-size: 0.9rem;
   margin-top: 3rem;
 }
+
+/* ======= LINKS ======= */
 a {
   color: #E3242B;
   text-decoration: none;
